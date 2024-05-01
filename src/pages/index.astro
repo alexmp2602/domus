@@ -1,0 +1,27 @@
+---
+import "@/styles/globals.css";
+import Layout from "../layouts/Layout.astro";
+
+import Hero from "@/components/Hero.astro";
+import Services from "@/components/Services.astro";
+import Location from "@/components/Location.astro";
+---
+
+<Layout
+  title="Domus | Estética Profesional"
+  description="Descubre en Domus un refugio de belleza y bienestar. Ofrecemos una amplia gama de tratamientos faciales, corporales, de manicura y pedicura, así como servicios de peluquería y maquillaje. En Domus, creemos que cuidar de ti mismo es fundamental para sentirte bien. Encuéntranos en Av. Pedro Molina 791, M5500 Mendoza y contáctanos al +54902616609363 o vía WhatsApp al . ¡Visítanos y experimenta la transformación de tu belleza interior y exterior!"
+>
+  <main class="flex-1">
+    <div class="space-y-8">
+      <section class="w-full py-6 md:py-12 lg:py-24 border-y">
+        <Hero />
+      </section>
+      <section class="w-full py-6 md:py-12 lg:py-24" id="Servicios">
+        <Services />
+      </section>
+      <section class="w-full py-6 md:py-12 lg:py-24" id="Ubicación">
+        <Location />
+      </section>
+    </div>
+  </main>
+</Layout>
