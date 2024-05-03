@@ -18,7 +18,7 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="domus-logo.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -31,19 +31,13 @@ const { title, description } = Astro.props;
 
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+    --color-primario: rgb(208, 66, 125);
+    --color-secundario: rgb(61, 61, 61);
   }
 
   html {
     font-family: "Yeseva One", system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -52,6 +46,44 @@ const { title, description } = Astro.props;
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
+    background-color: rgb(245, 245, 245);
+    background-image: linear-gradient(
+      135deg,
+      rgba(245, 245, 245, 1) 0%,
+      rgba(208, 66, 125, 0.1) 100%
+    );
+  }
+
+  /* Color primario en componentes */
+  .btn-primario {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-primario:hover {
+    background-color: rgba(208, 66, 125, 0.8);
+  }
+
+  /* Encabezados con color primario */
+  h1,
+  h2,
+  h3 {
+    color: var(--color-primario);
+  }
+
+  /* Enlaces con color primario */
+  a {
+    color: var(--color-primario);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -62,8 +94,7 @@ const { title, description } = Astro.props;
 
   @media (prefers-color-scheme: dark) {
     body {
-      color: rgba(255, 255, 255, 0.9);
+      color: rgb(245, 245, 245);
     }
   }
-  
 </style>

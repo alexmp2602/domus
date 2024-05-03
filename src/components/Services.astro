@@ -1,54 +1,52 @@
+---
+const servicios = [
+  {
+    titulo: "Tratamientos faciales",
+    descripcion: "Limpieza profunda, hidratación y rejuvenecimiento.",
+  },
+  {
+    titulo: "Tratamientos corporales",
+    descripcion: "Masajes relajantes, envolturas y exfoliaciones.",
+  },
+  {
+    titulo: "Manos y pies",
+    descripcion: "Manicuras, pedicuras y tratamientos de uñas.",
+  },
+  {
+    titulo: "Peluquería",
+    descripcion: "Cortes, peinados y tintes.",
+  },
+  {
+    titulo: "Maquillaje",
+    descripcion: "Maquillaje para eventos y sesiones de fotos.",
+  },
+];
+---
+
 <div class="container px-4 md:px-6">
   <div class="flex flex-col items-center justify-center space-y-4 text-center">
-    <div class="space-y-2">
-      <div
-        class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800"
-      >
+    <div class="space-y-4">
+      <div class="inline-block rounded-lg px-3 py-1 text-sm text-white shadow-lg" style="background-color: var(--color-secundario);">
         Servicios
       </div>
       <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">
         Tratamientos de belleza
       </h2>
-      <p
-        class="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400"
-      >
-        Descubre nuestros tratamientos faciales, corporales, de manos y pies,
-        peluquería y maquillaje.
+      <p class="max-w-[900px] text-gray-500 md:text-xl lg:text-xl xl:text-xl dark:text-gray-400">
+        Descubre nuestros tratamientos faciales, corporales, de manos y pies, peluquería y maquillaje.
       </p>
     </div>
   </div>
-  <div
-    class="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12"
-  >
-    <div class="grid gap-1">
-      <h3 class="text-lg font-bold">Tratamientos faciales</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Limpieza profunda, hidratación y rejuvenecimiento.
-      </p>
-    </div>
-    <div class="grid gap-1">
-      <h3 class="text-lg font-bold">Tratamientos corporales</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Masajes relajantes, envolturas y exfoliaciones.
-      </p>
-    </div>
-    <div class="grid gap-1">
-      <h3 class="text-lg font-bold">Manos y pies</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Manicuras, pedicuras y tratamientos de uñas.
-      </p>
-    </div>
-    <div class="grid gap-1">
-      <h3 class="text-lg font-bold">Peluquería</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Cortes, peinados y tintes.
-      </p>
-    </div>
-    <div class="grid gap-1">
-      <h3 class="text-lg font-bold">Maquillaje</h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        Maquillaje para eventos y sesiones de fotos.
-      </p>
-    </div>
+  <div class="mx-auto px-4 grid max-w-5xl items-center gap-6 pt-6 pb-4 lg:grid-cols-3 lg:gap-12">
+    {
+      servicios.map((servicio) => (
+        <div class="grid gap-1 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out min-h-[100px]">
+          <h3 class="text-lg font-bold">{servicio.titulo}</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            {servicio.descripcion}
+          </p>
+        </div>
+      ))
+    }
   </div>
 </div>

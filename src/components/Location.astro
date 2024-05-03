@@ -1,14 +1,15 @@
 ---
-import MapPinIcon from "../components//icons/MapPin.astro";
-import PhoneIcon from "../components//icons/Phone.astro";
-import MailIcon from "../components//icons/Mail.astro";
+import MapPinIcon from "../components/icons/MapPin.astro";
+import PhoneIcon from "../components/icons/Phone.astro";
+import MailIcon from "../components/icons/Mail.astro";
 ---
 
 <div class="container px-4 md:px-6">
-  <div class="grid gap-10 px-10 md:gap-16 lg:grid-cols-2">
+  <div class="grid gap-10 px-4 md:gap-16 lg:grid-cols-2">
     <div class="space-y-4">
       <div
-        class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800"
+        class="inline-block rounded-lg px-3 py-1 text-sm text-white shadow-lg"
+        style="background-color: var(--color-secundario);"
       >
         Ubicación
       </div>
@@ -17,29 +18,40 @@ import MailIcon from "../components//icons/Mail.astro";
       >
         Encuéntranos en el corazón de la ciudad
       </h2>
-      <p
-        class="max-w-[600px] text-gray-500 md:text-xl/relaxed dark:text-gray-400"
-      >
+      <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 text-pretty">
         Estamos ubicados en una zona céntrica y accesible, con opciones de
         transporte público y estacionamiento cercano.
       </p>
       <div class="flex flex-col gap-2">
         <div class="flex items-center gap-2">
           <MapPinIcon class="w-5 h-5" />
-          Av. Pedro Molina 791, M5500 Mendoza
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Pedro+Molina+791,+M5500+Mendoza"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Av. Pedro Molina 791, M5500 Mendoza
+          </a>
         </div>
         <div class="flex items-center gap-2">
           <PhoneIcon class="w-5 h-5" />
-          +5492616609363
+          <a href="tel:+5492616609363">+5492616609363</a>
         </div>
         <div class="flex items-center gap-2">
           <MailIcon class="w-5 h-5" />
-          info@domus.com
+          <a href="mailto:info@domus.com">info@domus.com</a>
         </div>
       </div>
     </div>
-    <div class="relative h-[400px] rounded-lg overflow-hidden">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13400.344045797863!2d-68.8512166!3d-32.8958941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e092136c1324d%3A0xec7c1a647052ac04!2sEstetica%20Domus!5e0!3m2!1ses-419!2sar!4v1714535694960!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="relative h-0 overflow-hidden pb-[75%] rounded-lg">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13400.344045797863!2d-68.8512166!3d-32.8958941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e092136c1324d%3A0xec7c1a647052ac04!2sEstetica%20Domus!5e0!3m2!1ses-419!2sar!4v1714535694960!5m2!1ses-419!2sar"
+        title="Ubicación de Estetica Domus"
+        class="absolute top-0 left-0 w-full h-full"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </div>
