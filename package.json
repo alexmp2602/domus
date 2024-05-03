@@ -12,6 +12,8 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/carme": "^5.0.12",
+    "@fontsource/roboto": "^5.0.13",
     "@fontsource/yeseva-one": "^5.0.20",
     "astro": "^4.7.0",
     "class-variance-authority": "^0.7.0",

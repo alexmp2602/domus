@@ -33,25 +33,23 @@ const { title, description } = Astro.props;
   :root {
     --color-primario: rgb(208, 66, 125);
     --color-secundario: rgb(61, 61, 61);
+    --color-fondo-rosa: rgb(252, 204, 220);
+    --color-fondo-crema: rgb(255, 248, 220);
   }
 
   html {
-    font-family: "Yeseva One", system-ui, sans-serif;
+    font-family: "Carme", "Roboto", system-ui, sans-serif;
     scroll-behavior: smooth;
   }
 
   body {
-    font-family: "Yeseva One", system-ui;
+    font-family: "Carme", "Roboto", system-ui;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
-    background-color: rgb(245, 245, 245);
-    background-image: linear-gradient(
-      135deg,
-      rgba(245, 245, 245, 1) 0%,
-      rgba(208, 66, 125, 0.1) 100%
-    );
+    background-color: var(--color-fondo-crema);
+
   }
 
   /* Color primario en componentes */
