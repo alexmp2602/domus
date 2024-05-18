@@ -1,3 +1,7 @@
+---
+import Whatsapp from "./icons/Whatsapp.astro";
+---
+
 <div class="p-5 md:pt-0 sm:px-10 md:px-20 space-y-8">
   <img
     alt="Logo de Domus, simbolizando belleza y relajación"
@@ -21,13 +25,12 @@
         Descubre nuestros tratamientos de belleza y relájate en un ambiente
         acogedor. Déjate mimar por nuestros expertos profesionales.
       </p>
-      <!-- Modifica el href aquí con tu número de WhatsApp -->
       <a
-        class="inline-flex h-10 items-center justify-center rounded-md bg-gray-800 px-5 py-3 text-base text-white shadow-lg transition-colors hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/50 disabled:pointer-events-none disabled:opacity-75 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-100/90 dark:focus-visible:ring-gray-300"
+        class="gap-2 inline-flex h-10 items-center justify-center rounded-md bg-gray-800 px-5 py-3 text-base text-white shadow-lg transition-colors hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/50 disabled:pointer-events-none disabled:opacity-75 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-100/90 dark:focus-visible:ring-gray-300"
         href="https://api.whatsapp.com/send?phone=+5492616609363&text=Hola,%20estoy%20interesado(a)%20en%20agendar%20una%20cita."
         aria-label="Agenda tu cita"
       >
-        Agenda tu cita
+        <Whatsapp/> Agenda tu cita
       </a>
     </div>
   </div>
