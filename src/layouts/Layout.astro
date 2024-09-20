@@ -21,6 +21,18 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" href="domus-logo.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Google tag (gtag.js) para Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
   </head>
   <body class="relative text-black dark:text-white">
     <Header />
@@ -49,7 +61,6 @@ const { title, description } = Astro.props;
     min-height: 100vh;
     overscroll-behavior: none;
     background-color: var(--color-fondo-crema);
-
   }
 
   /* Color primario en componentes */
