@@ -4,9 +4,10 @@ import Whatsapp from "./icons/Whatsapp.astro";
 
 <div class="p-5 md:pt-0 sm:px-10 md:px-20 space-y-8">
   <img
-    alt="Logo de Domus, simbolizando belleza y relajación"
+    alt="Logo de Estética Domus, tu centro de belleza y relajación"
     class="mx-auto overflow-hidden rounded-t-xl w-full max-w-[300px] sm:max-w-[600px] h-auto aspect-[3/1] mb-4"
-    src="/domus-logo.webp"
+    src="/domus-estetica-logo.webp"
+    loading="lazy"
   />
   <div
     class="grid max-w-[1300px] mx-auto gap-4 p-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16"
@@ -17,6 +18,9 @@ import Whatsapp from "./icons/Whatsapp.astro";
       >
         Belleza y relajación en Domus
       </h1>
+      <h2 class="sr-only">
+        Tratamientos de belleza para un estilo de vida relajado
+      </h2>
     </div>
     <div class="flex flex-col items-start space-y-4">
       <p
@@ -26,12 +30,30 @@ import Whatsapp from "./icons/Whatsapp.astro";
         acogedor. Déjate mimar por nuestros expertos profesionales.
       </p>
       <a
+        id="whatsapp-button"
         class="gap-2 inline-flex h-10 items-center justify-center rounded-md bg-gray-800 px-5 py-3 text-base text-white shadow-lg transition-colors hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-900/50 disabled:pointer-events-none disabled:opacity-75 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-100/90 dark:focus-visible:ring-gray-300"
         href="https://api.whatsapp.com/send?phone=+5492616609363&text=Hola,%20estoy%20interesado(a)%20en%20agendar%20una%20cita."
-        aria-label="Agenda tu cita"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Agenda tu cita en Estética Domus a través de WhatsApp"
       >
-        <Whatsapp/> Agenda tu cita
+        <Whatsapp /> Agenda tu cita
       </a>
     </div>
   </div>
 </div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const whatsappButton = document.getElementById("whatsapp-button");
+    if (whatsappButton) {
+      whatsappButton.addEventListener("click", () => {
+        gtag("event", "click", {
+          event_category: "WhatsApp",
+          event_label: "Hero Agenda tu cita",
+          value: 1,
+        });
+      });
+    }
+  });
+</script>

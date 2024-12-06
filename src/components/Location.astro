@@ -18,7 +18,9 @@ import MailIcon from "../components/icons/Mail.astro";
       >
         Encuéntranos en el corazón de la ciudad
       </h2>
-      <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 text-pretty">
+      <p
+        class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 text-pretty"
+      >
         Estamos ubicados en una zona céntrica y accesible, con opciones de
         transporte público y estacionamiento cercano.
       </p>
@@ -26,8 +28,9 @@ import MailIcon from "../components/icons/Mail.astro";
         <div class="flex items-center gap-2">
           <MapPinIcon class="w-5 h-5" />
           <a
-            href="#"
-            class="flex items-center hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            href="https://goo.gl/maps/YOUR_MAPS_LINK"
+            class="flex items-center text-gray-700 dark:text-gray-300 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            aria-label="Ver nuestra ubicación en Google Maps"
           >
             Av. Pedro Molina 791, M5500 Mendoza
           </a>
@@ -36,16 +39,18 @@ import MailIcon from "../components/icons/Mail.astro";
           <PhoneIcon class="w-5 h-5" />
           <a
             href="tel:+5492616609363"
-            class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            class="text-gray-700 dark:text-gray-300 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            aria-label="Llamar a Domus al +54 9 261 660 9363"
           >
-            +5492616609363
+            +54 9 261 660 9363
           </a>
         </div>
         <div class="flex items-center gap-2">
           <MailIcon class="w-5 h-5" />
           <a
             href="mailto:info@domus.com"
-            class="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            class="text-gray-700 dark:text-gray-300 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario)"
+            aria-label="Enviar un correo a info@domus.com"
           >
             info@domus.com
           </a>
@@ -55,12 +60,13 @@ import MailIcon from "../components/icons/Mail.astro";
     <div class="relative h-0 overflow-hidden pb-[75%] rounded-lg">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13400.344045797863!2d-68.8512166!3d-32.8958941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e092136c1324d%3A0xec7c1a647052ac04!2sEstetica%20Domus!5e0!3m2!1ses-419!2sar!4v1714535694960!5m2!1ses-419!2sar"
-        title="Ubicación de Estetica Domus"
+        title="Ubicación de Estética Domus"
         class="absolute top-0 left-0 w-full h-full"
         style="border:0;"
         allowfullscreen
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Mapa de la ubicación de Estética Domus"></iframe>
     </div>
   </div>
 </div>

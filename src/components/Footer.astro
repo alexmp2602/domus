@@ -3,23 +3,32 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="flex flex-col sm:flex-row gap-2 py-6 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t border-gray-300 dark:border-gray-700"
+  class="flex flex-col sm:flex-row gap-4 py-6 w-full shrink-0 items-center justify-between px-4 md:px-6 border-t border-gray-300 dark:border-gray-700"
 >
   <p class="text-xs text-gray-600 dark:text-gray-400">
     © {currentYear} Domus. Todos los derechos reservados.
   </p>
   <nav class="p-0 flex gap-4 sm:gap-6 items-center">
     <a
-      class="flex items-center text-xs hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario) text-gray-600 dark:text-gray-400"
-      href="#"
+      class="flex items-center text-xs px-2 py-1 hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario) text-gray-600 dark:text-gray-400"
+      href="/terminos-y-condiciones"
+      aria-label="Ver los términos y condiciones de Domus"
     >
       Términos y condiciones
     </a>
     <a
-      class="flex items-center text-xs hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario) text-gray-600 dark:text-gray-400"
-      href="#"
+      class="flex items-center text-xs px-2 py-1 hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario) text-gray-600 dark:text-gray-400"
+      href="/politica-de-privacidad"
+      aria-label="Leer la política de privacidad de Domus"
     >
       Política de privacidad
+    </a>
+    <a
+      href="#top"
+      class="text-xs hover:underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-var(--color-primario) text-gray-600 dark:text-gray-400"
+      aria-label="Volver al inicio de la página"
+    >
+      Volver arriba
     </a>
   </nav>
 </footer>
