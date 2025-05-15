@@ -1,0 +1,64 @@
+---
+import IconWhatsapp from "./icons/IconWhatsapp.astro";
+import IconMapPin from "./icons/IconMapPin.astro";
+import IconPhone from "./icons/IconPhone.astro";
+import IconMail from "./icons/IconMail.astro";
+---
+
+<footer id="contacto" class="bg-[#f5f5f5] text-[#2b2b2b] py-16 px-6 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Logo e introducción -->
+    <div>
+      <img
+        src="/domus-icono-m.jpg"
+        alt="Icono Domus Estética"
+        class="w-14 h-14 mb-4 rounded-md"
+        loading="lazy"
+      />
+      <p class="text-sm text-gray-600">
+        Domus es un espacio pensado para tu bienestar. Cuidamos tu piel, tu
+        cuerpo y tu esencia con tecnología, calidez y profesionalismo.
+      </p>
+    </div>
+
+    <!-- Información -->
+    <div>
+      <h4 class="text-lg font-semibold mb-3">Contacto</h4>
+      <ul class="text-sm space-y-3 text-gray-700">
+        <li class="flex items-start gap-2">
+          <IconMapPin />
+          <span>Av. Pedro Molina 791, M5500 Mendoza</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <IconPhone />
+          <span>+54 9 261 660 9363</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <IconMail />
+          <span>info@domus.com</span>
+        </li>
+        <li><strong>Horarios:</strong> Lun a Vie · 9:00 a 19:00</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="flex flex-col items-start gap-4">
+      <h4 class="text-lg font-semibold">¿Querés reservar tu turno?</h4>
+      <a
+        href="https://wa.me/5492616609363"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[#e94784] text-white rounded-md hover:bg-[#d93b74] transition text-sm"
+      >
+        <IconWhatsapp class="w-5 h-5" />
+        Escribinos por WhatsApp
+      </a>
+      <p class="text-xs text-gray-500">Respondemos de lunes a sábado.</p>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center text-xs text-gray-500">
+    © {new Date().getFullYear()} Domus Estética Profesional. Todos los derechos
+    reservados.
+  </div>
+</footer>

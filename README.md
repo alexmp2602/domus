@@ -1,47 +1,84 @@
-# Astro Starter Kit: Minimal
+# 💅 Domus Estética Profesional · Sitio Web 2025
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio institucional para **Domus Estética Profesional**, desarrollado con enfoque moderno, accesible y visualmente limpio. Desarrollado con [Astro](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/), implementando animaciones suaves, estructura semántica, y separación lógica entre componentes e íconos.
+
+---
+
+## 🚀 Tecnologías
+
+- ✅ [Astro](https://astro.build/) (v4+)
+- ✅ [Tailwind CSS](https://tailwindcss.com/)
+- ✅ Íconos SVG personalizados (Tabler Icons)
+- ✅ Animaciones simples con clases `fade-*` controladas por JS
+- ✅ Mobile-first & responsive
+- ✅ SEO optimizado (meta tags, Open Graph, favicon)
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/
+│   ├── Navbar.astro
+│   ├── Hero.astro
+│   ├── Services.astro
+│   ├── Us.astro
+│   ├── Testimonials.astro
+│   ├── Footer.astro
+│   └── icons/
+│       ├── IconHandFinger.astro
+│       ├── IconScissors.astro
+│       ├── IconFaceId.astro
+│       ├── IconMassage.astro
+│       └── IconRazor.astro
+├── layouts/
+│   └── Layout.astro
+├── pages/
+│   └── index.astro
+└── styles/
+    └── global.css
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🧠 Detalles Técnicos
 
-## 🚀 Project Structure
+- ⚙️ Animaciones se aplican con clases utilitarias (`fade-simple`, `fade-left`, `fade-right`, `fade-up`) y se activan en el layout con un script al montar.
+- ✏️ Colores personalizados:  
+  - Primario: `#e94784`  
+  - Fondo claro: `#fafafa`  
+  - Texto principal: `#2b2b2b`
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+## 📱 WhatsApp CTA
+
+Se utiliza botón fijo en esquina inferior derecha + link directo:
+
+```jsx
+<a href="https://wa.me/5492616609363" ...>Escribinos por WhatsApp</a>
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🔄 Por hacer (si querés expandir)
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [ ] Agregar carrusel o galería de fotos de tratamientos
+- [ ] Agregar formulario de reserva simple
+- [ ] Integrar reseñas reales desde Google Reviews con API
+- [ ] Agregar sección “Equipo” o “Testimonios extendidos”
+- [ ] Panel admin básico en futuro si se necesita autogestión
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 👤 Autor
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Desarrollado por [Alex Pereyra](https://www.alexpereyra.dev)  
+Contacto directo: [alexmp.2602@gmail.com](mailto:alexmp.2602@gmail.com)
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 📄 Licencia
+
+Este proyecto es privado y no debe ser reutilizado sin autorización expresa de Domus Estética Profesional.

@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
+const { title = "Domus | Estética Profesional" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="color-scheme" content="light" />
+    <meta
+      name="description"
+      content="Centro de estética profesional en Mercedes. Bienestar, salud y belleza con atención personalizada."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Tipografía moderna: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO / OG -->
+    <meta property="og:title" content="Domus Estética Profesional" />
+    <meta
+      property="og:description"
+      content="Bienestar, estética y profesionalismo en Mercedes."
+    />
+    <meta property="og:image" content="/domus-estetica-logo.webp" />
+    <meta property="og:url" content="https://www.esteticadomus.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-white text-[#2b2b2b] font-inter antialiased">
+    <slot />
+    <script src="/scripts/fade.js" defer></script>
+    <a
+      href="https://wa.me/+5492616609363"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white p-3 rounded-full shadow-lg transition md:hover:scale-105"
+      aria-label="Chatear por WhatsApp"
+    >
+      <IconWhatsapp class="w-6 h-6" />
+    </a>
+  </body>
+</html>
