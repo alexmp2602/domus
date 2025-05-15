@@ -1,10 +1,26 @@
+<script is:inline>
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    if (window.scrollY > 10) {
+      nav?.classList.add("bg-white/80", "backdrop-blur-md", "shadow-sm");
+    } else {
+      nav?.classList.remove("bg-white/80", "backdrop-blur-md", "shadow-sm");
+    }
+  });
+</script>
+
 <nav
-  class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out"
 >
   <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
     <!-- Logo -->
-    <a href="/" class="w-36 sm:w-40" aria-label="Inicio">
-      <img src="/domus-estetica-logo.webp" alt="Domus" class="w-full h-auto" />
+    <a href="/" class="max-w-[160px]" aria-label="Inicio">
+      <img
+        src="/domus-estetica-logo.webp"
+        alt="Domus Estética Profesional"
+        class="w-full h-auto object-contain"
+        loading="lazy"
+      />
     </a>
 
     <!-- Menú Desktop -->
@@ -29,7 +45,7 @@
       Reservá tu turno
     </a>
 
-    <!-- Botón Hamburguesa -->
+    <!-- Hamburguesa -->
     <button
       id="menu-toggle"
       class="md:hidden flex items-center justify-center w-10 h-10 text-gray-700"
@@ -69,11 +85,10 @@
     </a>
   </div>
 
-  <!-- Script para toggle -->
+  <!-- Toggle Menú Script -->
   <script is:inline>
     const toggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("mobile-menu");
-
     toggle?.addEventListener("click", () => {
       menu?.classList.toggle("hidden");
     });
