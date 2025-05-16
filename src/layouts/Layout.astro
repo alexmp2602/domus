@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import IconWhatsapp from "../components/icons/IconWhatsapp.astro";
+import StickyCTA from "../components/StickyCTA.astro";
+import WhatsappDesktop from "../components/WhatsappDesktop.astro";
 const { title = "Domus | Estética Profesional" } = Astro.props;
 ---
 
@@ -11,13 +12,38 @@ const { title = "Domus | Estética Profesional" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fafafa" />
     <meta name="color-scheme" content="light" />
+    <meta name="robots" content="index, follow" />
+
+    <title>{title}</title>
     <meta
       name="description"
-      content="Centro de estética profesional en Mercedes. Bienestar, salud y belleza con atención personalizada."
+      content="Centro de estética profesional en Mendoza. Tratamientos faciales y corporales, con atención cálida y personalizada para que te sientas bien desde adentro hacia afuera."
     />
 
-    <!-- Favicon -->
+    <!-- Favicon + Mobile -->
     <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph (Facebook / WhatsApp / Instagram) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Domus Estética Profesional" />
+    <meta
+      property="og:description"
+      content="Redescubrí tu belleza natural con estética profesional, calidez humana y pasión por el detalle. Estamos en Mendoza."
+    />
+    <meta property="og:image" content="/og-image.webp" />
+    <meta property="og:url" content="https://www.esteticadomus.com" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Domus Estética Profesional" />
+    <meta
+      name="twitter:description"
+      content="Tratamientos faciales y corporales con atención personalizada en Mendoza. Cuidamos tu piel con amor y profesionalismo."
+    />
+    <meta name="twitter:image" content="/og-image.webp" />
 
     <!-- Tipografía moderna: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,31 +52,12 @@ const { title = "Domus | Estética Profesional" } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- SEO / OG -->
-    <meta property="og:title" content="Domus Estética Profesional" />
-    <meta
-      property="og:description"
-      content="Bienestar, estética y profesionalismo en Mercedes."
-    />
-    <meta property="og:image" content="/domus-icono-m.webp" />
-    <meta property="og:url" content="https://www.esteticadomus.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <title>{title}</title>
   </head>
 
   <body class="bg-white text-[#2b2b2b] font-inter antialiased">
     <slot />
     <script src="/scripts/fade.js" defer></script>
-    <a
-      href="https://wa.me/+5492616609363"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white p-3 rounded-full shadow-lg transition md:hover:scale-105"
-      aria-label="Chatear por WhatsApp"
-    >
-      <IconWhatsapp class="w-6 h-6" />
-    </a>
+    <StickyCTA />
+    <WhatsappDesktop />
   </body>
 </html>
