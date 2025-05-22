@@ -39,7 +39,7 @@ const images = [
               class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
             />
           </div>
-          <figcaption class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 backdrop-blur-md rounded-xl">
+          <figcaption class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 backdrop-blur-md rounded-xl pointer-events-none group-[.show-after]:opacity-100">
             <img
               src={after}
               alt={`${alt} - Después`}
@@ -55,6 +55,18 @@ const images = [
   </div>
 
   <p class="text-center mt-10 text-sm text-gray-500">
-    Deslizá o tocá para ver la diferencia
+    Tocá para ver la diferencia
   </p>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const figures = document.querySelectorAll("figure.group");
+
+    figures.forEach((figure) => {
+      figure.addEventListener("click", () => {
+        figure.classList.toggle("show-after");
+      });
+    });
+  });
+</script>
